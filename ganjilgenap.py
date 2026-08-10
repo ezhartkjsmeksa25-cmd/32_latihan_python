@@ -9,3 +9,4 @@ while True:
         print("Bilangan Genap")
     else:
         print("Bilangan Ganjil")
+print("Program selesai.")
