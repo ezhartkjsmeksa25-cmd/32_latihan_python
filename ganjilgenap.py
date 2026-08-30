@@ -1,9 +1,8 @@
 def cek_ganjil_genap():
     print("\n--- MENU GANJIL GENAP ---")
     while True:
-        input_user = input("Masukkan angka atau 'x' untuk stop): ")
+        input_user = input("Masukkan angka (atau 'x' untuk kembali ke menu utama): ")
         if input_user.lower() == 'x':
-            print("Kembali ke program utama.")
             break
         
         try:
@@ -15,13 +14,11 @@ def cek_ganjil_genap():
         except ValueError:
             print("Input tidak valid! Masukkan angka yang benar.\n")
 
-cek_ganjil_genap()
 def cek_prima():
     print("\n--- MENU BILANGAN PRIMA ---")
     while True:
-        input_user = input("Masukkan angka (atau 'x' untuk stop): ")
+        input_user = input("Masukkan angka (atau 'x' untuk kembali ke menu utama): ")
         if input_user.lower() == 'x':
-            print("Kembali ke program utama.")
             break
             
         try:
@@ -42,4 +39,24 @@ def cek_prima():
         except ValueError:
             print("Input tidak valid! Masukkan angka yang benar.\n")
 
-cek_prima()
+# Navigasi Menu Utama
+while True:
+    print("=" * 30)
+    print("        MENU UTAMA        ")
+    print("=" * 30)
+    print("1. Cek Bilangan Ganjil/Genap")
+    print("2. Cek Bilangan Prima")
+    print("3. Exit / Keluar")
+    print("=" * 30)
+    
+    pilihan = input("Pilih menu (1/2/3): ")
+    
+    if pilihan == '1':
+        cek_ganjil_genap()
+    elif pilihan == '2':
+        cek_prima()
+    elif pilihan == '3':
+        print("\nTerima kasih! Program selesai.")
+        break
+    else:
+        print("\nPilihan tidak valid. Silakan pilih 1, 2, atau 3.\n")
